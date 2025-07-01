@@ -1,0 +1,511 @@
+
+<!doctype html>
+<html lang="en" class="view html5-player">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- BEGIN CUSTOM HEAD HTML -->
+    <!-- END CUSTOM HEAD HTML -->
+
+        <base id="cerosBase">
+
+        <script type="text/javascript">
+            (function () {
+                var locationWithNoQuery = document.location.href.split('?')[0].split('#')[0];
+                locationWithNoQuery = locationWithNoQuery.replace(/[><\(\)'"]/g,'');
+
+                if (document.location.pathname.match(/\.html$/)) {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/[^\/]*\.html$/, '');
+                } else {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/(\/p|\/page)\/[a-z0-9-]*\/?$/, '/');
+                }
+
+                document.getElementById('cerosBase').href = window.cerosBaseUrl;
+            })();
+        </script>
+
+
+        <script type="text/javascript" src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/webfont-1.6.3.js"></script>
+
+    <script type="text/javascript">
+        window.cerosContext = {
+        viewAssetsDomain    : '',
+            publicAssetsBaseUrl: 'assets/',
+            faviconUrl: '',
+            isEmbedded: top != window,
+            isVanityDomain: location.hostname !== 'view.ceros.com',
+            previewMode: false,
+            logging: {
+            emitDevWarnings : false,
+                modes: {
+                        'debug': false,
+                        'info': false,
+                        'warn': true,
+                        'error': true
+                }
+            },
+            usePageSlugsInNavigation: false,
+            usePreviewBanner: false,
+            useDocumentLoadingSpinner: true,
+            analyticsApplicationKey: 'player',
+            analyticsMaxDwellTime: 1800,
+            analyticsUrl: '',
+            apiVersion: 'v1',
+            revalidateWithCore: false,
+
+            ajaxCaching: true,
+        mediaDomainMap: null,
+            rollbarPlayerAccessKey: '5a0bfa1f72824a2eaef56e175f59ba24',
+            deploymentName: 'prod',
+            appVersion: 'hotfix.8.14.42.04a6d4711faac376f0babd6ebc7511864e772c03',
+            rollbarMaxItems: 5,
+        isExported: true,
+            isStudio: false,
+
+            openGraphUrl: '',
+            accountSlug: 'atlas-obscura',
+        gracePeriodExpired  : 9007199254740991 < Date.now() / 1000,
+            appSlug: 'non-fungible-planet',
+            issueAliasSlug: 'hub',
+            issue: {"id":"615451","project":"91381","slug":"experience-625549f842a32","name":"Non-Fungible Planet | Atlas Obscura x YouTube","status":"published","creationDate":"2022-04-12T09:44:24.000Z","lastModifiedDate":"2022-04-22T18:00:45.000Z","deletionDate":null,"firstPublishedDate":"2022-04-19T15:33:05.000Z","wipExperienceVersion":"2345074","publishedExperienceVersion":"2367446","createdByMemberId":"24600","primaryIssueAlias":857216,"firstPageThumbnailUrl":"\/\/media-s3-us-east-1.ceros.com\/atlas-obscura\/studio-thumbnails\/page-625549c1be55f.jpg","importShared":false,"lastPublishedDate":"2022-04-22T18:00:50.000Z","lastModifiedByMemberId":"32676","lastPublishedByMemberId":"32676","passwordProtected":false,"auth0UserId":null,"isTemplate":false,"templateSubtitle":null,"templateThumbnailUrl":null,"htmlLanguage":"en","lastUnpublishedDate":null,"lastUnpublishedByMember":null,"resourceId":"625549f8-c4f97d3252695","isSsoProtected":false,"markupId":null,"origin":null,"partner":null,"isSparkExperience":false,"sparkExperienceId":null,"title":"Non-Fungible Planet | Atlas Obscura x YouTube"},
+            docVersion: {"id":"2367446","experience":"615451","slug":"experience-version-6262ed51f3e02","loadLowRes":false,"googleAnalyticsId":null,"committedJsonUrl":"http:\/\/media.ceros.com\/atlas-obscura\/doc-version-json\/v11\/experience-version-6262ed51f3e02.js","themingBackgroundImageUri":null,"seoTitleKeywords":"Exploring The World's Most Incredible Natural Wonders","seoMetaKeywords":"","seoMetaDescription":"Watch as some of YouTube’s biggest creators guide us to eleven places of natural wonder in celebration of our incredible planet, from unthinkable heights to unexplored caverns.","canonicalUrlOverride":"http:\/\/nonfungibleplanet.atlasobscura.com\/","editorPagesManifest":[{"uri":"\/v1\/account\/atlas-obscura\/pages\/page-6262ed51f3e22","overrides":{"mobile":{"initiallyDisabled":false},"tablet":{"initiallyDisabled":false}},"initiallyDisabled":false,"thumbnail":"https:\/\/media-s3-us-east-1.ceros.com\/atlas-obscura\/page-thumbnails\/2022\/04\/22\/64ce3b2dd3daf9179af49fdd2b867fb8\/page-thumbnail.jpg?imageOpt=1&crop=870,489,x0,y0"}],"cdeExportUrl":null,"exportAppVersion":null,"creationDate":"2022-04-22T18:00:50.000Z","modificationDate":"2022-04-22T18:00:50.000Z","publishedDate":"2022-04-22T18:00:49.000Z","committedByMember":"32676","unsupportedBrowserRedirectUrl":"","ogTitle":"The World's Most Incredible Natural Wonders","ogDescription":"This year, YouTube and Atlas Obscura are celebrating Earth Day by visiting some of the world’s greatest natural wonders. We’ve partnered to put some of YouTube’s biggest creators in the driver’s seat as they guide us to eleven places of natural wonder in celebration of our incredible planet. From unthinkable heights and unexplored caverns to jaw-dropping waterfalls and one-of-a-kind deserts, there's so much wonder to explore.","ogImageUrl":"https:\/\/media.ceros.com\/atlas-obscura\/images\/2022\/04\/22\/75dbeb73bdd38dab9b3a17e722a729e0\/thumb4.jpg","twitterTitle":"The World's Most Incredible Natural Wonders","twitterDescription":"This Earth Day, discover some of the world’s greatest natural wonders in this series of eco-excursions with some of your favorite creators.","twitterImageUrl":"https:\/\/media.ceros.com\/atlas-obscura\/images\/2022\/04\/22\/75dbeb73bdd38dab9b3a17e722a729e0\/thumb4.jpg","twitterHandle":"@atlasobscura","lazyLoading":false,"tarExportUrl":null,"pageNamesInTitle":false,"mainContentLinkText":null,"textMode":"char","zoomControlsEnabled":true,"requireUserConsentForAnalytics":0,"integrateWithCmp":0,"editableContentCount":0,"adminEditable":true,"textComponentType":"old_text","editorMode":"unset","lineHeightCompatibility":"no_baseline_offset","playerServerSideRendering":"no_player_server_side_rendering","seoMode":"experience_and_embed","layoutSettings":{"layoutPrimarySetting":"device-type","maxTabletWidthBreakpoint":1280,"maxMobileWidthBreakpoint":800,"deviceTypeMissingVariantFallback":"desktop"},"carousel":{"enabled":false,"autoTransition":false,"autoTransitionDelay":"5"},"theming":{"arrowsEnabled":false,"swipeEnabled":false,"menuEnabled":false,"backgroundColor":"#FFFFFF","menuFgColor":"#FFFFFF","menuBgColor":"#000000","backgroundImage":null}},
+            fontManifest: {"Google|Roboto|400|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|400|normal","variantName":"Normal","cssFamilyName":"Roboto","api":"Google"},"Google|Roboto|500|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":500,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|500|normal","variantName":"Medium","cssFamilyName":"Roboto","api":"Google"},"Google|Roboto|700|italic":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":700,"fontStyle":"italic","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|700|italic","variantName":"Bold italic","cssFamilyName":"Roboto","api":"Google"},"Google|Roboto|700|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":700,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|700|normal","variantName":"Bold","cssFamilyName":"Roboto","api":"Google"}},
+        whiteLabeling   : true,
+        isTrialAccount      : false,
+        allowCommerceIntegration  : false,
+        allowEmbeddedPlayerSdk    : true,
+        allowAdaptiveLayouts: true,
+            commerceSettings: {
+            panelWidth      : null,
+            panelHeight     : null,
+                productUrl: '',
+                shoppingCartUrl: '',
+            },
+                themeObj: {
+                arrowsEnabled    : false,
+                swipeEnabled     : false,
+                menuEnabled      : false,
+                    menuFgColor: '#FFFFFF',
+                    menuBgColor: '#000000',
+                    menuHoverOpacity: 0.6,
+                    backgroundColor: '#FFFFFF',
+                backgroundImage  :
+                        null
+
+                },
+            googleFontUrl: '',
+            featureFlags: {"Password Protected Experiences":false,"Getty Image Integration":false,"Getty Video Integration":false,"Accessibility":false,"(BETA) Protected Preview":false,"Cookie Compliance":true,"Position Interactions":true,"Editor":true,"New Text Tool":true,"Studio API":false,"SSO Protected Experiences":false,"Studio Redesign":true,"(New Text Tool) List And Bullets":false,"(New Text Tool) Subscript And Superscript":false,"(New Text Tool) Html Element":true,"(New Text Tool) Object States":false,"(New Text Tool) Spellcheck":false,"Editor for Creators":false,"Remove window.eval":true,"Editor Image Crop And Resize":true,"Editor Debug Mode":false,"Improved Team Management":true,"(New Text Tool) Columns":true,"Open in MarkUp":true,"Create Account from Login":true,"Individual Accounts":true,"New Text Tool Experience Converter (requires New Text Tool)":true,"Studio Lite":true,"Intercom Support Chat":true,"Editor Sign Up":true,"Beamer":true,"Showcase Experience":false,"Component Library":true,"SDR Editor Invite":false,"Force Protected Experiences":false,"Request Feedback":false,"Editor Free For Import":true,"Home Screen":true,"Seismic Integration":false,"New Selection Behavior":false,"AI Features":true,"Experience Sharing":true,"Show Import Design Files":true,"Player Server Side Rendering":true,"Floating Toolbar":true,"Getty Library Integration":true,"Use Embed Modal":true,"Onboarding":true,"Use Modern IpadOS Scrolling":true,"Allow importing PDF design files":false,"Hubspot Styling":false,"Asset Library - Ceros Assets":true,"Spark Experiences in Admin":false,"Export PDF":false,"New Selection Behavior - Mouse Up":false,"New Text Data Model Change":false,"Convert Experiences to Spark":false},
+            analyticsTrackers: {
+                cerosPlayerTracker: {enabled: true },
+                googleAnalyticsTracker: {"enabled":false},
+                googleTagManagerTracker: {"enabled":false},
+                marketoTracker: {enabled: false, accountId: '' },
+                eloquaTracker: {enabled: false, siteId: '', cookieDomain: ''},
+                universalAnalyticsTracker: {enabled: true }
+            },
+
+        
+            useOptimizedJs: true,
+        };
+    </script>
+
+    <!--
+      DISPLAY SETTINGS
+    -->
+        <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="monitor-signature" content="monitor:player:html5"/>
+
+    <title>Non-Fungible Planet | Atlas Obscura x YouTube Exploring The World&#39;s Most Incredible Natural Wonders</title>
+
+
+
+        <meta name="description" content="Watch as some of YouTube’s biggest creators guide us to eleven places of natural wonder in celebration of our incredible planet, from unthinkable heights to unexplored caverns."/>
+
+
+    <meta property="og:title" content="The World&#39;s Most Incredible Natural Wonders"/>
+        <meta property="og:image" content="media/75dbeb73bdd38dab9b3a17e722a729e0/thumb4.jpg"/>
+    <meta property="og:description" content="This year, YouTube and Atlas Obscura are celebrating Earth Day by visiting some of the world’s greatest natural wonders. We’ve partnered to put some of YouTube’s biggest creators in the driver’s seat as they guide us to eleven places of natural wonder in celebration of our incredible planet. From unthinkable heights and unexplored caverns to jaw-dropping waterfalls and one-of-a-kind deserts, there's so much wonder to explore."/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The World&#39;s Most Incredible Natural Wonders">
+    <meta name="twitter:description" content="This Earth Day, discover some of the world’s greatest natural wonders in this series of eco-excursions with some of your favorite creators.">
+        <meta name="twitter:image" content="media/75dbeb73bdd38dab9b3a17e722a729e0/thumb4.jpg">
+        <meta name="twitter:site" content="@atlasobscura">
+
+    <script language="Javascript" id="docversion-request-script">
+        window.docVersionRequest = window.jQuery.ajax({
+            url           : "media/experience-version-6262ed51f3e02.js",
+            dataType      : 'jsonp',
+            jsonp         : false, 
+            cache         : true,  
+            jsonpCallback : "loadDocVersion_v1_account_atlas_obscura_document_versions_experience_version_6262ed51f3e02",
+            success       : window.jQuery.noop 
+        });
+    </script>
+
+    <!--
+      FONTS
+    -->
+
+
+    
+        <!-- BEGIN UNIVERSAL ANALYTICS INTEGRATION HTML -->
+        <script type="text/javascript">
+!function(p,r,e,s,b,d){p.pbq||(s=p.pbq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.0',s.queue=[],b=r.createElement(e),b.async=!0,b.src='https://sr.studiostack.com/v3/services',
+d=r.getElementsByTagName(e)[0],d.parentNode.insertBefore(b,d))}(window,document,'script');
+pbq('init', '151719');
+pbq('set', 'story');
+pbq('activate', 'ceros-universal-analytics');
+</script>
+        <!-- END UNIVERSAL ANALYTICS INTEGRATION HTML -->
+
+
+    <!-- BEGIN FAVICON -->
+    <!-- END FAVICON -->
+
+    <script type="text/javascript">
+        window.cerosPlayerLoadStart = new Date();
+    </script>
+
+    <!--
+        Although the player itself no longer uses requirejs, users can still use requirejs with
+        the SDK. Therefore, we need to continue including it here... for now...
+    -->
+    <script
+        type="text/javascript"
+        crossorigin="anonymous"
+        src="assets/player/shared/libs/require/require-min.b03b66057d7df9b2cc9aa9c4c18aa569.js">
+    </script>
+
+    <script
+            type="text/javascript"
+            async
+            crossorigin="anonymous"
+            charset="UTF-8"
+            src="assets/player/applications/html5-player/bootstrap-optimized.c5950ea1028295e12ce460ce3894730e.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/player/applications/html5-player/css/html5-player.065a0b44212cf72a3978377a9f0a04df.css"/>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        body:-ms-fullscreen::-ms-backdrop {
+            background-color: #FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+
+    <noscript>
+        
+            <div class="page"><img src="media/3f824ac367c02dafe36d92eb44fbc5c0/screenshot-2021-08-02-at-10-13-35-full.png" alt=""  class="image-component"/>
+<img src="media/16577e2bd7267f0347c0884123d750e7/screenshot-2021-03-24-at-23-30-10-full.png" alt=""  class="image-component"/>
+<img src="media/278c07393aa693a708e2f9a68fb0652b/screenshot-2021-10-27-at-12-22-01-pm-full.png" alt=""  class="image-component"/>
+<img src="media/1f566b2a0a372eab45fb0c3491bf30df/screenshot-2022-02-24-at-11-39-13-am-full.png" alt=""  class="image-component"/>
+<p class="text-component">This year, YouTube and Atlas Obscura are celebrating Earth Day by visiting some of the world’s greatest natural wonders. For every breathtaking YouTube creator-led eco-excursion, an adjoining article will dig deeper into each marvelous location or subject.
+
+There’s no replacing this magnificent planet—jump in to find 11 more reasons to cherish our one-of-a-kind home.</p>
+<img src="media/ea4e65fefd3ec6200760965d089bee8b/processed-svg-arrow-icon.svg" alt=""  class="image-component"/>
+<img src="media/771ddc1e79da565dd7abcb6d3b2d15a9/hs-ao-nfp-main-blue-2-full.jpg" alt=""  class="image-component"/>
+<img src="media/2e4a4a3b9aac6cd7c683211c534d1a92/yt-earthday22-nfp-primary-axolotl-02-full.png" alt=""  class="image-component"/>
+<p class="text-component">We only get one planet—let’s make this the year we make a difference.</p>
+<p class="text-component">
+NON-FUNGIBLE PLANET Overview</p>
+<p class="text-component">In 2022, YouTube and Atlas Obscura are continuing our shared commitment to sustainability. We’ve partnered to put some of YouTube’s biggest creators in the driver’s seat as they guide us to eleven places of natural wonder in celebration of our incredible planet.
+
+These creator-led adventures will span unthinkable heights and unexplored caverns, jaw-dropping waterfalls and one-of-a-kind deserts, otherworldly gardens and ecosystems rippling with life to reveal the marvels of our natural world. But it’s not all fun and games—this is adventure with a purpose. 
+
+Each eco-excursion will be tied to an NGO fighting to protect the vital habitats, landscapes, and waterways we’ve visited. We only get one planet, and while it’s important to appreciate its hidden nooks and crannies, it’s even better when we can help ensure they remain intact for future generations.
+
+This year, we invite you to open your eyes, expect the unexpected, and join us in the obligation we all share to the place we call home. Happy Earth Day!
+</p>
+<p class="text-component">An expedition by foot, bridge, and canoe to visit the world’s only floating national park.</p>
+<p class="text-component">MostlySane x 
+Loktak Lake, India</p>
+<p class="text-component">Jina Kim explores an array of plant life on a deserted island turned botanical paradise.</p>
+<p class="text-component">Its Jina Kim x 
+Oedo Botania, South Korea</p>
+<p class="text-component">Lasizwe zip-lines through mountains and spelunks for crystals in the oldest cave system on earth.</p>
+<p class="text-component">Lasizwe Dambuza x 
+Sudwala Caves, South Africa</p>
+<p class="text-component">A rugged hike deep into the Brazilian jungle leads to the largest cave mouth in the world.</p>
+<p class="text-component">Manual Do Mundo x 
+Casa de Pedro Grotto, Brazil</p>
+<p class="text-component">A thought-provoking day-trip to a mysterious megalith in the French countryside. </p>
+<p class="text-component">Cyrus North x 
+Carnac Stones, France</p>
+<p class="text-component">This slippery expedition ventures to one of the wettest places on earth, home to living root bridges.</p>
+<p class="text-component">Slayy Point x 
+The Root Bridges, India</p>
+<p class="text-component">Jack explores a world of botanical beauty packed into sprawling London gardens.</p>
+<p class="text-component">Jack Harries x 
+Kew Gardens</p>
+<p class="text-component">Mark Vins joins a wildlife expert on a midnight trek deep into an untouched Ecuadorian rainforest.</p>
+<p class="text-component">Mark Vins x 
+Amazon Rainforest, Ecuador</p>
+<img src="media/82808913593bb445bde15423cb8da516/trailer-copy-full.jpg" alt=""  class="image-component"/>
+<img src="media/364f747abc139dcfb7cab546d314196d/screenshot-2022-03-24-at-12-23-10-full.png" alt=""  class="image-component"/>
+<img src="media/364f747abc139dcfb7cab546d314196d/screenshot-2022-03-24-at-12-23-10-full.png" alt=""  class="image-component"/>
+<img src="media/752be0f0568f2fe22457da76ea104ce8/screenshot-2022-03-24-at-12-23-23-full.png" alt=""  class="image-component"/>
+<img src="media/752be0f0568f2fe22457da76ea104ce8/screenshot-2022-03-24-at-12-23-23-full.png" alt=""  class="image-component"/>
+<img src="media/33a2a9a76014f6cd5cdb3734a1dc2043/screenshot-2022-03-24-at-12-23-38-full.png" alt=""  class="image-component"/>
+<img src="media/752be0f0568f2fe22457da76ea104ce8/screenshot-2022-03-24-at-12-23-23-full.png" alt=""  class="image-component"/>
+<img src="media/8e9d55369d7da5cef277045dac4f9cb2/screenshot-2022-03-24-at-13-16-52-full.png" alt=""  class="image-component"/>
+<img src="media/3519509f4cd0327c5145f373f69c9d1d/screenshot-2022-03-24-at-13-17-52-full.png" alt=""  class="image-component"/>
+<img src="media/3519509f4cd0327c5145f373f69c9d1d/screenshot-2022-03-24-at-13-17-52-full.png" alt=""  class="image-component"/>
+<img src="media/364f747abc139dcfb7cab546d314196d/screenshot-2022-03-24-at-12-23-10-full.png" alt=""  class="image-component"/>
+<p class="text-component">Join Bretman Rock on a verdant hike through a tropical rainforest to a 442-foot waterfall.
+</p>
+<img src="media/364f747abc139dcfb7cab546d314196d/screenshot-2022-03-24-at-12-23-10-full.png" alt=""  class="image-component"/>
+<img src="media/33a2a9a76014f6cd5cdb3734a1dc2043/screenshot-2022-03-24-at-12-23-38-full.png" alt=""  class="image-component"/>
+<p class="text-component">close</p>
+<p class="text-component">Bretman Rock x 
+‘Akaka Falls, Hawaii</p>
+<img src="media/5aa972eefcbe4b05ac6f4df3f4db781a/hs-ao-nfp-hub-03-full.jpg" alt=""  class="image-component"/>
+<img src="media/11e81af1e91ec7762b5f814066ba088b/hs-ao-nfp-hub-02-full.jpg" alt=""  class="image-component"/>
+<img src="media/78e5ae87dd609f1e3150658ad876ee59/hs-ao-nfp-hub-03-full.jpg" alt=""  class="image-component"/>
+<p class="text-component">This moon-white dune field is home to geological oddities and endemic species.</p>
+<p class="text-component">AsapSCIENCE x 
+White Sands, New Mexico</p>
+<img src="media/33a2a9a76014f6cd5cdb3734a1dc2043/screenshot-2022-03-24-at-12-23-38-full.png" alt=""  class="image-component"/>
+<p class="text-component">Julia sketches her way through plant-packed global garden biomes in Southwest England.</p>
+<p class="text-component">Julia Gisella x 
+Eden Project, England</p>
+<img src="media/752be0f0568f2fe22457da76ea104ce8/screenshot-2022-03-24-at-12-23-23-full.png" alt=""  class="image-component"/>
+<p class="text-component">Welcome to Non-Fungible Planet</p>
+<p class="text-component">Trailer</p>
+<img src="media/7ce748098579b252832fe8b1f90ae685/hs-ao-nfp-hub-videos-title-12-full.png" alt=""  class="image-component"/>
+<img src="media/8fcfc66498b08713c29e939239b3f6cd/hs-ao-nfp-overview-13-full.png" alt=""  class="image-component"/>
+<img src="media/0fdd71096dfb7bddd634cb98b7053184/hs-ao-nfp-article-card-red-02-full.png" alt=""  class="image-component"/>
+<img src="media/0fdd71096dfb7bddd634cb98b7053184/hs-ao-nfp-article-card-red-02-full.png" alt=""  class="image-component"/>
+<img src="media/0fdd71096dfb7bddd634cb98b7053184/hs-ao-nfp-article-card-red-02-full.png" alt=""  class="image-component"/>
+<img src="media/e80056bfe3536197c162faea27dcf2f9/hs-ao-nfp-article-card-blue-07-full.png" alt=""  class="image-component"/>
+<img src="media/e80056bfe3536197c162faea27dcf2f9/hs-ao-nfp-article-card-blue-07-full.png" alt=""  class="image-component"/>
+<img src="media/e80056bfe3536197c162faea27dcf2f9/hs-ao-nfp-article-card-blue-07-full.png" alt=""  class="image-component"/>
+<img src="media/a3b7387428c572de782a7b8c14789f6b/hs-ao-nfp-article-card-yellow-06-full.png" alt=""  class="image-component"/>
+<img src="media/a3b7387428c572de782a7b8c14789f6b/hs-ao-nfp-article-card-yellow-06-full.png" alt=""  class="image-component"/>
+<img src="media/a3b7387428c572de782a7b8c14789f6b/hs-ao-nfp-article-card-yellow-06-full.png" alt=""  class="image-component"/>
+<img src="media/0846dc9b42fcfe455bcf7136cb32cf62/hs-ao-nfp-article-card-purple-05-full.png" alt=""  class="image-component"/>
+<img src="media/0846dc9b42fcfe455bcf7136cb32cf62/hs-ao-nfp-article-card-purple-05-full.png" alt=""  class="image-component"/>
+<img src="media/0846dc9b42fcfe455bcf7136cb32cf62/hs-ao-nfp-article-card-purple-05-full.png" alt=""  class="image-component"/>
+<img src="media/7ce748098579b252832fe8b1f90ae685/hs-ao-nfp-hub-videos-title-12-full.png" alt=""  class="image-component"/>
+<img src="media/1f566b2a0a372eab45fb0c3491bf30df/screenshot-2022-02-24-at-11-39-13-am-full.png" alt=""  class="image-component"/>
+<img src="media/12fa562df05db1cab96b46cf557057fe/bretman-rock-dialogue-00-03-35-27-still002-full.png" alt=""  class="image-component"/>
+<img src="media/d26aec75beb52fb1eae0f995acbe4164/dsc00216-full.png" alt=""  class="image-component"/>
+<img src="media/7768c292fc6d1c47b03289f2633dfc64/dialogue-resolve-manual-da-mundo-jina-kim-01-41-58-03-still005-full.png" alt=""  class="image-component"/>
+<img src="media/d762a5dfa0eddf726702d138e8579a07/locked-with-mix-00-00-10-21-still003-full.png" alt=""  class="image-component"/>
+<img src="media/f2234bd4678508d0ec96b4413c23b089/dialogue-resolve-manual-da-mundo-jina-kim-01-20-36-12-still002-full.png" alt=""  class="image-component"/>
+<img src="media/6779e3621a95440533e7c8144033a7f6/screen-shot-2022-04-20-at-12-44-16-pm-full.png" alt=""  class="image-component"/>
+<img src="media/c7b72e88230e0ec9dc56af7427b7177c/slay-point-b-roll-00-21-05-15-still006-full.png" alt=""  class="image-component"/>
+<img src="media/fd31060a5e318d51042a3a89b30f8ade/asap-science-dialogue-00-17-26-00-still001-full.png" alt=""  class="image-component"/>
+<img src="media/59b632afc7d2f18cb6979a295778ff4c/jack-full.png" alt=""  class="image-component"/>
+<img src="media/8379f36517ef6264bc5fa5b51eca9dfb/b-roll-resolve-mark-vins-manual-da-mundo-jina-kim-01-01-01-00-still007-full.png" alt=""  class="image-component"/>
+<img src="media/721edf9f20840995725574e01d158307/locked-with-mix-00-00-54-08-still002-full.png" alt=""  class="image-component"/></div>
+    </noscript>
+
+
+<div id="main"></div>
+<div id="backgroundContainer"></div>
+
+
+    <!-- BEGIN CUSTOM HTML -->
+    <script>
+$("link[rel='shortcut icon']").attr('href','https://s3.amazonaws.com/atlas-dev/misc/icons/favicon.ico')
+</script>
+
+
+<script> 
+var verticalContent = document.getElementsByClassName("vertical-group");
+var pageContainer = document.getElementsByClassName("page-container"); 
+var addEventTrigger = true; 
+var scrollPosition = 0, 
+    pageWidth = 1280, 
+    slideHeight = 720; 
+
+var minScrollOne, maxScrollOne, minScrollTwo, maxScrollTwo, minScrollThree, maxScrollThree; 
+
+//----------PARALLAX
+var dataSpeedVariable = [10, 15, 20, 74, 84, 95, 98, 100];
+var setAttr = false;
+var layers;
+
+(function(){ 
+    'use strict'; 
+    require.config({ 
+        paths: { 
+            CerosSDK: '//sdk.ceros.com/standalone-player-sdk-v5.min' 
+        } 
+    }); 
+    require(['CerosSDK'], function (CerosSDK) { 
+        CerosSDK.findExperience() 
+            .fail(function (error) { 
+                console.error(error); 
+            }) 
+            .done(function (experience) { 
+                window.myExperience = experience; 
+
+                experience.on(CerosSDK.EVENTS.PAGE_CHANGED, pageChangedCallback); 
+                    function pageChangedCallback(){ 
+                        var verticalGroupName = "vertical-group";
+                        var parallaxGroupName  = "parallax-group";            
+                        var parallaxName  = "parallax";
+                        var verticalGroup =  experience.findLayersByTag(verticalGroupName);
+                        var parallaxGroup = experience.findLayersByTag(parallaxGroupName);
+                        var parallax = experience.findComponentsByTag(parallaxName);
+
+                        var objectsNames = [verticalGroupName, parallaxGroupName, parallaxName], 
+                            objects = [verticalGroup, parallaxGroup, parallax]; 
+
+                        for(var i = 0; i<objects.length; i++){ 
+                            objects[i].layers.forEach(function(component){ 
+                                var id = '#' + component.id; 
+                                $(id).addClass(objectsNames[i]); 
+                            });  
+                        } 
+                        loadingScroll(); 
+                    } 
+            }) 
+    }); 
+})(); 
+
+function loadingScroll(){ 
+    for(i=0;i<pageContainer.length;i++){ 
+        //--------PARALLAX
+        pageContainer[i].addEventListener("scroll", para); 
+
+        if(addEventTrigger == true){ 
+            pageContainer[i].addEventListener("scroll", scrollEffect); 
+        } 
+//-------------------------IMPORTANT!!!-------------------------// 
+//      i == page number (counting from bottom and starting from zero) 
+//      Ceros anchor number in brackets: 
+//          minScroll: anchor starting a scrolling 
+//          maxScroll: anchor ending a scrolling 
+        if($(pageContainer[i]).parent().hasClass("page-viewport top") && i == 0){ 
+            let pageScroll = $(pageContainer[i]).children().first(); 
+            let anchor = $(pageScroll).children(`.scranchor`).toArray(); 
+            minScrollOne = parseInt(anchor[1].style.top, 10); 
+            maxScrollOne = parseInt(anchor[2].style.top, 10); 
+            minScrollTwo = parseInt(anchor[3].style.top, 10); 
+            maxScrollTwo = parseInt(anchor[4].style.top, 10); 
+            minScrollThree = parseInt(anchor[5].style.top, 10); 
+            maxScrollThree = parseInt(anchor[6].style.top, 10); 
+        } 
+    } 
+    addEventTrigger = false; 
+} 
+
+function scrollEffect(){ 
+    scrollPosition = this.scrollTop; 
+    var differencePosOne = scrollPosition-minScrollOne; 
+    var differencePosTwo = scrollPosition-minScrollTwo; 
+    var differencePosThree = scrollPosition-minScrollThree;
+
+    //ONE
+    //scroll position is between both Ceros anchors 
+    if(this.scrollTop >= minScrollOne && this.scrollTop <= maxScrollOne){  
+        verticalContent[0].style.transform = 'translate(0px, ' + differencePosOne + 'px)'; 
+    } 
+    //scroll position is above first Ceros anchor 
+    else if(this.scrollTop < minScrollOne){ 
+        verticalContent[0].style.transform = 'translate(0px, 0px)';
+    } 
+    //scroll position is below second Ceros anchor 
+    else{ 
+        verticalContent[0].style.transform = 'translate(0px,' + (maxScrollOne-minScrollOne) + 'px)'; 
+    } 
+
+    //TWO
+    //scroll position is between both Ceros anchors 
+    if(this.scrollTop >= minScrollTwo && this.scrollTop <= maxScrollTwo){  
+        verticalContent[1].style.transform = 'translate(0px, ' + differencePosTwo + 'px)'; 
+    } 
+    //scroll position is above first Ceros anchor 
+    else if(this.scrollTop < minScrollTwo){ 
+        verticalContent[1].style.transform = 'translate(0px, 0px)';
+    } 
+    //scroll position is below second Ceros anchor 
+    else{ 
+        verticalContent[1].style.transform = 'translate(0px,' + (maxScrollTwo-minScrollTwo) + 'px)'; 
+    } 
+
+    //THREE
+    //scroll position is between both Ceros anchors 
+    if(this.scrollTop >= minScrollThree && this.scrollTop <= maxScrollThree){  
+        verticalContent[2].style.transform = 'translate(0px, ' + differencePosThree + 'px)'; 
+    } 
+    //scroll position is above first Ceros anchor 
+    else if(this.scrollTop < minScrollThree){ 
+        verticalContent[2].style.transform = 'translate(0px, 0px)';
+    } 
+    //scroll position is below second Ceros anchor 
+    else{ 
+        verticalContent[2].style.transform = 'translate(0px,' + (maxScrollThree-minScrollThree) + 'px)'; 
+    } 
+} 
+
+function para() {
+    layers = document.getElementsByClassName('parallax');
+    var top = this.scrollTop;
+    var layer, speed, yPos; 
+
+    if(setAttr != true){
+        var sortByZIndex = function(a, b){
+            return b.style.zIndex - a.style.zIndex;
+        }
+        var sorted = $(layers).sort(sortByZIndex);
+        for(var y = 0; y < sorted.length; y++){ 
+            sorted[y].setAttribute("data-speed", dataSpeedVariable[y]);
+        }
+        setAttr = true;
+    }
+     
+    for (var i = 0; i < layers.length; i++) {
+        layer = layers[i];
+        speed = layer.getAttribute('data-speed');
+        yPos = (top * speed / 100);
+        layer.style.transform = 'translate3d(0px, ' + yPos + 'px, 0px)';
+    }
+};
+</script>
+
+<style>
+    /* ::-webkit-scrollbar{
+        width: 18px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #de413ede; 
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: #DE403E; 
+    }
+    ::-webkit-scrollbar-thumb:active{
+        background-color:  #dd5956; 
+    }
+    .page-container{
+        scrollbar-color: #DE403E rgba(255, 255, 255,0);
+    } */
+</style>
+    <!-- END CUSTOM HTML -->
+
+
+
+    <div id="page-transition-aria-live" class="sr-only" aria-live="assertive"></div>
+</body>
+</html>
